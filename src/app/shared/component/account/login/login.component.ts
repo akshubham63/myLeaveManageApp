@@ -15,7 +15,7 @@ export class LoginComponent{
     constructor(private _accountService: AccountService){}
 
     onLoginSubmit(form: NgForm){
-        if(form.value.isChecked === true){
+        if(form.value.isChecked === true && form.valid){
             let userData: ILoginUser = {
                 email: form.value.email,
                 password: form.value.password

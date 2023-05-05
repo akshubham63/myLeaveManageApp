@@ -1,0 +1,65 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="accountForm">
+            <form class="userForm" [formGroup]="mySignupForm" (ngSubmit)="onSignupSubmit()">
+                <h1 class="text-center text-capitalize mb-4">sign up</h1>
+                <div class="row">
+                    <div class="col">
+                        <label for="fname"></label>
+                        <input type="text" class="form-control i-control" placeholder="First Name" id="fname" formControlName="fname">
+                    </div>
+                    <div class="col">
+                        <label for="lname"></label>
+                        <input type="text" class="form-control i-control" placeholder="Last Name" id="lname" formControlName="lname">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="email"></label>
+                        <input type="email" class="form-control i-control" placeholder="Enter Email" id="email" formControlName="email">
+                    </div>
+                    <div class="col">
+                        <label for="contact"></label>
+                        <input type="tel" class="form-control i-control" placeholder="Enter Contact Number" id="contact" formControlName="contact">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="username"></label>
+                        <input type="text" class="form-control i-control" placeholder="Enter Username" id="username" formControlName="username">
+                    </div>
+                    <div class="col">
+                        <label for="password"></label>
+                        <input type="password" class="form-control i-control" placeholder="Enter Password" id="password" formControlName="password">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="inputState"></label>
+                        <select id="inputState" class="form-control i-control" formControlName="branch">
+                            <option value="civil">Civil</option>
+                        </select>
+                    </div>
+                    <div class="col userRole">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="role" id="hod" value="HOD" formControlName="role">
+                            <label class="form-check-label" for="hod">HOD</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="role" id="staff" value="staff" formControlName="role">
+                            <label class="form-check-label" for="staff">Staff</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="isChecked">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-danger w-100 mb-3" [disabled]="isSignupValid">Sign Up</button>
+                <p class="text-center">
+                    Already Registered? <a>login</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>

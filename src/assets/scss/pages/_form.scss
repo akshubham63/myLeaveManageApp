@@ -16,5 +16,9 @@
                 box-shadow: 0 0 0.2rem transparent;
             }
         }
+        .col{
+            @include content-center;
+            margin-bottom: 2rem;
+        }
     }
 }

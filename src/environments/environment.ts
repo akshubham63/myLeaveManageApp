@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  loginUrl: 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key='
+  loginUrl: 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=',
+  signUpUrl: 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key='
 };
 
 /*
