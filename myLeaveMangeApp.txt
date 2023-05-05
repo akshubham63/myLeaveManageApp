@@ -1,0 +1,10 @@
+component:
+    -dashboard
+    -
+Services:
+    -
+Shared:
+    -component:
+        -account:
+            -login
+            -signup

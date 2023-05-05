@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="accountForm">
+            <form class="userForm" #loginForm="ngForm" (ngSubmit)="onLoginSubmit(loginForm)">
+                <ng-container *ngFor="let message of loginError">
+                    <p class="alert alert-danger">{{message.message}}</p>
+                </ng-container>
+                <div class="form-group">
+                    <label for="email"></label>
+                    <input type="email" class="form-control i-control" id="email" aria-describedby="emailHelp" placeholder="Enter email"  name="email"  required #email>
+                    <!-- <small id="emailHelp" class="form-text text-danger text-capitalize" *ngIf="email.value">please enter the email</small> -->
+                </div>
+                <div class="form-group">
+                    <label for="password"></label>
+                    <input type="password" class="form-control i-control" id="password" placeholder="Password" name="password" minlength="6" ngModel required>
+                </div>
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" name="isChecked" ngModel required>
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">login</button>
+            </form>
+        </div>
+    </div>
+</div>
