@@ -10,7 +10,6 @@ import { IAccountRes, ILoginUser } from '../modules/interfaces';
 export class AccountService{
     private _apiKey: string = 'AIzaSyCkWzSshHF0tPhxLjGBV9Jafg1jX2WJnvw';
     constructor(private _http: HttpClient){}
-
     onLogin(data: ILoginUser){
         let url: string = environment.loginUrl + this._apiKey;
         return this._http.post<IAccountRes>(url, data);
