@@ -12,3 +12,11 @@
 @import './assets/scss/utilities/mixin';
 @import './assets/scss/pages/form';
 
+a{
+    &,
+    &:link,
+    &:visited{
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
