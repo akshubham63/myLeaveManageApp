@@ -38,10 +38,12 @@ export class SignupComponent{
                 username: this.mySignupForm.value.username,
                 password: this.mySignupForm.value.password,
                 branch: this.mySignupForm.value.branch,
-                role: this.mySignupForm.value.role
+                role: this.mySignupForm.value.role,
+                returnSecureToken: true
             }
             this._accountService.onSignup(userData).subscribe(res => {
                 console.log(res);
+                this.mySignupForm.reset();
                 
             }, err => {
                 console.log(err);

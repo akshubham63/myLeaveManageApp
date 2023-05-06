@@ -1,6 +1,7 @@
 export interface ILoginUser{
     email: string,
-    password: string
+    password: string,
+    returnSecureToken: boolean
 }
 
 export interface IAccountRes{
@@ -21,4 +22,5 @@ export interface ISignUpUser{
     password: string;
     branch: string;
     role: 'HOD' | 'staff';
+    returnSecureToken: boolean;
 }
