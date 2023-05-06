@@ -11,6 +11,7 @@ import { SignupComponent } from './shared/component/account/signup/signup.compon
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { ProfileComponent } from './shared/component/profile/profile.component';
+import { LeaveCardComponent } from './shared/component/leave-card/leave-card.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ProfileComponent } from './shared/component/profile/profile.component';
     SignupComponent,
     NavbarComponent,
     DashboardComponent,
-    ProfileComponent
+    ProfileComponent,
+    LeaveCardComponent
   ],
   imports: [
     BrowserModule,
