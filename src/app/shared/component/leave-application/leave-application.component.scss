@@ -1,0 +1,25 @@
+.application-card{
+    .application-card-body{
+        background-color: #ededed;
+        box-shadow: 0.5px 0.5px 5px 0.5px #101010;
+        border-radius: 1rem;
+        .status-state{
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+    .profile{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .profile-img{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        } 
+        .profile-heading{
+            font-size: 1.5rem;
+        }
+    }
+}

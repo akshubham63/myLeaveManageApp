@@ -12,6 +12,7 @@ import { NavbarComponent } from './component/navbar/navbar.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { ProfileComponent } from './shared/component/profile/profile.component';
 import { LeaveCardComponent } from './shared/component/leave-card/leave-card.component';
+import { LeaveApplicationComponent } from './shared/component/leave-application/leave-application.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { LeaveCardComponent } from './shared/component/leave-card/leave-card.com
     NavbarComponent,
     DashboardComponent,
     ProfileComponent,
-    LeaveCardComponent
+    LeaveCardComponent,
+    LeaveApplicationComponent
   ],
   imports: [
     BrowserModule,
