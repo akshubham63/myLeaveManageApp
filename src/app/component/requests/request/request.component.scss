@@ -1,0 +1,32 @@
+@import '../../../../assets/scss/utilities/mixin';
+.leave-request{
+    @include content-center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ededed;
+    .request-card{
+        width: 40%;
+        border-radius: 1rem;
+        .leave-heading{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .leave-heading{
+        mat-icon{
+            cursor: pointer;
+        }
+    }
+    .date-picker{
+        display: flex;
+        justify-content: space-around;
+        .date-field-input{
+            display: flex;
+        }
+    }
+    .reason{
+        label{
+            margin-left: 1rem;
+        }
+    }
+}

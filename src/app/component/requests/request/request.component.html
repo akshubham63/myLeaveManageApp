@@ -1,0 +1,56 @@
+<div app-backdrop></div>
+<div class="leave-request">
+    <div class="card request-card">
+        <div class="card-body">
+            <div class="leave-heading mb-3">
+                <h3 class="text-capitalize">Leave Details</h3>
+                <div class="cross-icon">
+                    <mat-icon>clear</mat-icon>
+                </div>
+            </div>
+            <h5 class="text-capitalize ml-4">Date</h5>
+            <form (ngSubmit)="onReasonSubmit()" [formGroup]="myReasonForm">
+                <div class="date-picker mb-5">
+                    <div class="from-date">
+                        <p class="text-capitalize">from*</p>
+                        <mat-form-field class="example-full-width date-field" appearance="fill">
+                            <mat-label class="date-label">Choose a date</mat-label>
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <div class="date-field-input">
+                                <input matInput [matDatepicker]="picker" formControlName="fromDate">
+                                <mat-datepicker-toggle matIconSuffix matSuffix [for]="picker">
+                                <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                                </mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </div>
+                        </mat-form-field>
+                    </div>
+                    <div class="to-date">
+                        <p class="text-capitalize">to*</p>
+                        <mat-form-field class="example-full-width date-field" appearance="fill">
+                            <mat-label class="date-label">Choose a date</mat-label>
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <div class="date-field-input">
+                                <input matInput [matDatepicker]="picker1" formControlName="toDate">
+                                <mat-datepicker-toggle matIconSuffix [for]="picker1">
+                                <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                                </mat-datepicker-toggle>
+                                <mat-datepicker #picker1></mat-datepicker>
+                            </div>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="reason mb-3">
+                    <mat-form-field appearance="fill" class="w-100 mx-2">
+                        <mat-label>Reason*</mat-label>
+                        <textarea matInput formControlName="reason"></textarea>
+                    </mat-form-field>
+                </div>
+                <div class="reason-btn text-right">
+                    <button class="text-capitalize btn btn-danger mr-2">cancel</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

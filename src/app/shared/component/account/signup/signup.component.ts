@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ISignUpUser } from 'src/app/shared/modules/interfaces';
+import { ISignUpUser } from 'src/app/shared/models/interfaces';
 import { AccountService } from 'src/app/shared/services/account.service';
 
 @Component({
@@ -9,10 +9,11 @@ import { AccountService } from 'src/app/shared/services/account.service';
     styleUrls: ['./signup.component.scss']
 })
 
-export class SignupComponent{
+export class SignupComponent implements OnInit{
     mySignupForm!: FormGroup;
 
-    constructor(private _fb: FormBuilder, private _accountService: AccountService){
+    constructor(private _fb: FormBuilder, private _accountService: AccountService){}
+    ngOnInit(): void{
         this.mySignupForm = this._fb.group({
             fname: [null, [Validators.required]],
             lname: [null, [Validators.required]],
@@ -25,10 +26,9 @@ export class SignupComponent{
             isChecked: [null, [Validators.required]]
         })
     }
-
+    
     onSignupSubmit(){
         console.log(this.mySignupForm);
-        
         if(this.mySignupForm.valid && this.mySignupForm.value.isChecked){
             let userData: ISignUpUser = {
                 fname: this.mySignupForm.value.fname,

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ILoginUser } from 'src/app/shared/modules/interfaces';
+import { ILoginError, ILoginUser } from 'src/app/shared/models/interfaces';
 import { AccountService } from 'src/app/shared/services/account.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { AccountService } from 'src/app/shared/services/account.service';
 })
 
 export class LoginComponent{
-    loginError!: Array<{message: string, domain: string, reason: string}>;
+    loginError!: Array<ILoginError>;
     constructor(private _accountService: AccountService, private _router: Router){}
 
     onLoginSubmit(form: NgForm){

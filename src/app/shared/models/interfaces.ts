@@ -24,3 +24,9 @@ export interface ISignUpUser{
     role: 'HOD' | 'staff';
     returnSecureToken: boolean;
 }
+
+export interface ILoginError{
+    message: string, 
+    domain: string,
+    reason: string
+}

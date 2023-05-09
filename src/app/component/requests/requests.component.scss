@@ -1,0 +1,12 @@
+.createRequest{
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    .createRequest-icon{
+        color: inherit;
+    }
+    fa-icon{
+        font-size: 3rem;
+        cursor: pointer;
+    }
+}

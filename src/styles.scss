@@ -2,10 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
-*,
-*::after,
-*::before{
-    font-family: 'Poppins', sans-serif;
+*{
+    &,
+    &::after,
+    &::before{
+        font-family: 'Poppins', sans-serif;
+    }
 }
 
 @import './assets/scss/utilities/variables';
@@ -20,3 +22,9 @@ a{
         text-decoration: none;
     }
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import "./node_modules/bootstrap/scss/bootstrap";
+

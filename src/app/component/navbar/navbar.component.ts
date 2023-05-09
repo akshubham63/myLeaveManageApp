@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faUserCircle } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
     selector: 'app-navbar',
@@ -6,4 +7,8 @@ import { Component } from '@angular/core';
     styleUrls: ['./navbar.component.scss']
 })
 
-export class NavbarComponent{}
+export class NavbarComponent{
+    isShowHistoryDrop: boolean = false;
+    isUserDropDown: boolean = false;
+    faUserCircle = faUserCircle;
+}
